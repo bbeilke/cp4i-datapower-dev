@@ -1,0 +1,12 @@
+  kind: Route
+  apiVersion: route.openshift.io/v1
+  metadata:
+    name: dproute 
+    namespace: cp4i 
+  spec:
+    host: dev1-ivt.bbcluster-syd01-4c1a443ebaec2dc527b196dee1db66b5-0000.au-syd.containers.appdomain.cloud 
+    to:
+      kind: Service
+      name: dev1-service 
+    port:
+      targetPort: 8000 

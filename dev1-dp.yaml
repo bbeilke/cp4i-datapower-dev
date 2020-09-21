@@ -1,0 +1,32 @@
+apiVersion: datapower.ibm.com/v1beta1
+kind: DataPowerService
+metadata:
+  name: dev1
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    use: production
+  replicas: 1
+  resources:
+    limits:
+      memory: 8Gi
+    requests:
+      cpu: 4
+      memory: 4Gi
+    request:
+      cpu: '4'
+      memory: 4G
+    limit:
+      cpu: '4'
+      memory: 4G
+  version: 10.0.0
+  users:
+    - accessLevel: privileged
+      name: admin
+      passwordSecret: admin-credentials
+  domains:
+  - name: "foo"
+    dpApp:
+      config:
+      - "foobar-config"
