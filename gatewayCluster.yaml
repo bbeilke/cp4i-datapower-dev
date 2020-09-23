@@ -1,0 +1,55 @@
+apiVersion: v1
+items:
+- apiVersion: gateway.apiconnect.ibm.com/v1beta1
+  kind: GatewayCluster
+  metadata:
+    name: dev1-gw
+    namespace: velox
+  spec:
+    appVersion: 10.0.0.0-ifix2-922
+    profile: n1xc4.m8
+    imagePullSecrets:
+    - ibm-entitlement-key
+    - ibm-entitlement-key
+    - ibm-entitlement-key
+    imageRegistry: cp.icr.io/cp/apic
+    apicGatewayServiceV5CompatibilityMode: false
+    gatewayEndpoint:
+      annotations:
+        certmanager.k8s.io/issuer: apic-ingress-issuer
+    gatewayManagerEndpoint:
+      annotations:
+        certmanager.k8s.io/issuer: apic-ingress-issuer
+    apicGatewayPeeringTLS:
+      secretName: apic-gw-peer
+    apicGatewayServiceTLS:
+      secretName: apic-gw-svc
+    datapowerLogLevel: 3
+    defaultLogFormat: text
+    license:
+      accept: true
+      metric: VirtualProcessorCore
+      use: production
+    adminUser:
+      secretName: apic-gw-admin
+    apiDebugProbe: true
+    apiDebugProbeExpirationMinutes: 60
+    apiDebugProbeMaxRecords: 1000
+    certManagerIssuer:
+      kind: Issuer
+      name: apic-self-signed
+    configSequenceInterval: 3000
+    microServiceSecurity: certManager
+    openTracing:
+      enabled: false
+      imageAgent: cp.icr.io/cp/icp4i/od/icp4i-od-agent@sha256:18bf9e7ab3c6818865488c919d9d26de74186223db0318c8e118184a08ef9956
+      imageCollector: cp.icr.io/cp/icp4i/od/icp4i-od-collector@sha256:1eceef4bbd0f963b04ff57fbf8b24f497217ae8579ad3b58f833dce3c72eaab2
+      odTracingDataHostname: ""
+      odTracingNamespace: cp4i
+      odTracingRegistrationHostname: ""
+    peeringLogLevel: internal
+    replicaCount: 1
+    template: []
+    webGUIManagementEnabled: false
+    webGUIManagementPort: 9090
+kind: List
