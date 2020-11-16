@@ -4,7 +4,7 @@ metadata:
   name: dev1-service 
 spec:
   selector:
-    app.kubernetes.io/instance: cp4i-dev1
+    app.kubernetes.io/instance: datapower-dev1
     app.kubernetes.io/name: datapower 
   ports:
     - protocol: TCP
