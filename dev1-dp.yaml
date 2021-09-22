@@ -6,7 +6,8 @@ metadata:
 spec:
   license:
     accept: true
-    use: production
+    license: L-RJON-BYDR3Q
+    use: nonproduction
   replicas: 1
   resources:
     limits:
