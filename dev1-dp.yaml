@@ -2,7 +2,7 @@ apiVersion: datapower.ibm.com/v1beta1
 kind: DataPowerService
 metadata:
   name: dev1
-  namespace: cp4i
+  namespace: datapower
 spec:
   license:
     accept: true
