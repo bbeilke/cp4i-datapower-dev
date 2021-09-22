@@ -10,7 +10,6 @@ idg# config
 idg(config)# web-mgmt
 idg(config web-mgmt)# admin-state enabled
 exit
-write mem
 
 -------------------
 Forward the web-gui to your machine :
