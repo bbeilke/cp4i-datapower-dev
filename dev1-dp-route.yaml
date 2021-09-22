@@ -2,7 +2,7 @@
   apiVersion: route.openshift.io/v1
   metadata:
     name: dproute 
-    namespace: cp4i 
+    namespace: datapower
   spec:
     host: dev1-ivt.cp4isyd-demo-643d6b687ab93581d24420becac24aae-0000.au-syd.containers.appdomain.cloud 
     to:
