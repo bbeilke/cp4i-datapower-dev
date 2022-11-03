@@ -10,3 +10,5 @@ spec:
     name: dev1-service 
   port:
     targetPort: 9090 
+  tls:
+    termination: passthrough
