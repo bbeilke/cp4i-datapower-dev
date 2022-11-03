@@ -1,0 +1,12 @@
+kind: Route
+  apiVersion: route.openshift.io/v1
+  metadata:
+    name: dproute 
+    namespace: datapower
+  spec:
+    host: dev1-ivt-ui.cluster471-643d6b687ab93581d24420becac24aae-0000.au-syd.containers.appdomain.cloud 
+    to:
+      kind: Service
+      name: dev1-service 
+    port:
+      targetPort: 9090 
