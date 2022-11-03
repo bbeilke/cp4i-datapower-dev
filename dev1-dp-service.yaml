@@ -9,7 +9,9 @@ spec:
   ports:
     - protocol: TCP
       port: 8000
+      name: rest
       targetPort: 8000 
     - protocol: TCP
       port: 9090
+      name: ui
       targetPort: 9090
