@@ -8,7 +8,7 @@ spec:
     accept: true
     license: L-RJON-CCCP46
     use: nonproduction
-  replicas: 2
+  replicas: 1
   resources:
     limits:
       memory: 8Gi
