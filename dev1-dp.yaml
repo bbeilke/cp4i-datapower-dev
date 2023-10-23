@@ -6,7 +6,7 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-RJON-CCCP46
+    license: L-NWQG-8KNQE4
     use: nonproduction
   replicas: 1
   resources:
@@ -21,7 +21,7 @@ spec:
     limit:
       cpu: '4'
       memory: 4G
-  version: 10.0-cd
+  version: 10.5.1.0
   users:
     - accessLevel: privileged
       name: admin
