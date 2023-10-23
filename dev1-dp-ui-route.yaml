@@ -4,7 +4,7 @@ metadata:
   name: dproute-ui
   namespace: datapower
 spec:
-  host: dev1-ivt-ui.itzroks-310000mg1w-5wkxit-6ccd7f378ae819553d37d5f2ee142bd6-0000.jp-tok.containers.appdomain.cloud
+  host: dev1-ivt-ui.mycluster-syd01-c3c-32x64-4c1a443ebaec2dc527b196dee1db66b5-0000.au-syd.containers.appdomain.cloud
   to:
     kind: Service
     name: dev1-service 
